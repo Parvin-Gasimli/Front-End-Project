@@ -1,0 +1,40 @@
+#main-item {
+    .bacImg {
+        background-image: url(../img/About-us/p1-title-img.jpg);
+        height: 320px;
+        background-color: #fafaf9;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .text {
+        padding: 103px;
+        display: block;
+        h1 {
+            color: black;
+            text-align: center;
+            font-family: $second-font;
+            font-size: 50px;
+            line-height: 1.32em;
+        }
+        p {
+            color: $colorGray;
+            font-family: $second-font;
+            vertical-align: middle;
+            font-family: Lora, serif;
+            font-size: 17px;
+            font-style: italic;
+            text-transform: none;
+        }
+    }
+}
+
+@media(max-width:576px) {
+    .text {
+        h1 {
+            font-size: 32px !important;
+        }
+    }
+    h1 {
+        font-size: 30px !important;
+    }
+}

@@ -1,0 +1,122 @@
+#tabs {
+  @extend %head-page;
+  .tabs {
+    .tabs-content {
+      @extend %section;
+      .navs1 {
+        @extend %tabs;
+      }
+      .navs2 {
+        @extend %tabs;
+        .click-tabs {
+          ul {
+            li {
+              border: 0;
+              background-color: $bgColor;
+              &:hover {
+                color: white;
+                background-color: $colorMoothRed !important;
+              }
+            }
+          }
+        }
+      }
+      .navs3 {
+        margin-top: 50px;
+        @extend %tabs;
+        .click-tabs {
+          ul {
+            li {
+              border: 0;
+              &:hover {
+                color: black;
+              }
+            }
+          }
+        }
+        .active {
+          background-color: transparent !important;
+          color: $colorMoothRed;
+          &:hover {
+            color: $colorMoothRed !important;
+          }
+        }
+        .content {
+          border: 0;
+          border-top: 1px solid #eee;
+          border-bottom: 1px solid #eee;
+        }
+      }
+      .navs4 {
+        @extend %tabs;
+        display: flex;
+        .click-tabs {
+          ul {
+            display: inline-block;
+            li {
+              &:hover {
+                color: white;
+                background-color: $colorMoothRed !important;
+              }
+            }
+          }
+        }
+        .content {
+          width: 100%;
+        }
+      }
+      @extend %tabs-content;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .tabs {
+    .tabs-content {
+      .navs1 {
+        .click-tabs {
+          ul {
+            li {
+              width: 100%;
+              padding: 7px 21px !important;
+              margin-bottom: 1px;
+            }
+          }
+        }
+      }
+      .navs2 {
+        .click-tabs {
+          ul {
+            li {
+              width: 100%;
+              margin-bottom: 8px;
+              padding: 7px 21px !important;
+            }
+          }
+        }
+      }
+      .navs3 {
+        .click-tabs {
+          ul {
+            li {
+              padding-left: 0 !important;
+            }
+          }
+        }
+      }
+      .navs4 {
+        display: block !important;
+        .click-tabs {
+          ul {
+            display: flex !important;
+            text-align: center;
+            li {
+              width: 100%;
+              padding: 15px 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

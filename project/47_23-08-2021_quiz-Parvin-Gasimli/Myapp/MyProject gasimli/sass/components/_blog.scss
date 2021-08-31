@@ -1,0 +1,97 @@
+ #blog {
+     .blog {
+         padding-top: 70px;
+         padding-bottom: 70px;
+         background-color: $bgColor;
+         .heading {
+             @extend %textSpecial;
+             max-width: 100%;
+             text-align: center;
+             p {
+                 max-width: 620px;
+                 text-align: center;
+                 margin: auto;
+             }
+         }
+         .blog-content {
+             @extend %section;
+             margin-top: 30px;
+             .card {
+                 overflow: hidden;
+                 border: 0;
+                 background-color: transparent;
+                 .img {
+                     overflow: hidden;
+                     position: relative;
+                     display: flex;
+                     justify-content: center;
+                     img {
+                         transition: 0.3s;
+                         height: 100% !important;
+                         object-fit: cover;
+                         cursor: pointer;
+                     }
+                     &:hover {
+                         img {
+                             transform: scale(1.04);
+                         }
+                     }
+                     .date {
+                         @extend %bandage;
+                         color: black;
+                         background-color: #fff;
+                         font-family: $first-font;
+                         font-size: 10px;
+                         padding: 12px 16px 10px;
+                         font-weight: 500;
+                         text-transform: uppercase;
+                         letter-spacing: 0.15em;
+                         line-height: 1em;
+                         transition: 0.3s;
+                         cursor: pointer;
+                         &:hover {
+                             color: $colorMoothRed;
+                         }
+                     }
+                 }
+                 .card-body {
+                     @extend %card-body;
+                     font-family: $second-font;
+                     .text-img {
+                         text-transform: capitalize;
+                         font-weight: lighter;
+                         letter-spacing: 0.03rem;
+                     }
+                     .card-foot {
+                         font-family: Lora, serif;
+                         font-size: 15px;
+                         letter-spacing: 0.05rem;
+                     }
+                 }
+             }
+         }
+     }
+ }
+ 
+ @media (max-width:400px) {
+     .blog {
+         .heading {
+             h1 {
+                 font-size: 30px!important;
+             }
+             p {
+                 font-size: 14px !important;
+             }
+         }
+         .blog-content {
+             .card-body {
+                 h5 {
+                     font-size: 20px!important;
+                 }
+                 p {
+                     font-size: 14px!important;
+                 }
+             }
+         }
+     }
+ }

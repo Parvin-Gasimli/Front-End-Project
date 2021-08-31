@@ -1,0 +1,60 @@
+#email {
+    .email {
+        width: 100%;
+        height: 570px;
+        margin-top: 70px;
+        background-image: url(https://fiorello.qodeinteractive.com/wp-content/uploads/2018/05/h3-background-img.jpg);
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: 50% 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .mail-input {
+            width: 100%;
+            text-align: center;
+            h3 {
+                font-family: $second-font;
+                color: white;
+            }
+            form {
+                margin: auto;
+                justify-content: center;
+                display: flex;
+                input[type="email"],
+                .button {
+                    height: 60px !important;
+                    @extend %btn-font;
+                }
+                input[type="email"] {
+                    padding: 19px;
+                    width: 450px;
+                }
+            }
+            .messages-email {
+                color: white;
+                font-size: 24px;
+                .error-email {
+                    display: none;
+                    width: 220px;
+                    margin: auto;
+                    background-color: $colorMoothRed;
+                    border-radius: 12px;
+                    padding: 0 10px;
+                }
+                .succses-email {
+                    display: none;
+                    width: 420px;
+                    margin: auto;
+                    background-color: green;
+                    border-radius: 12px;
+                    padding: 0 10px;
+                }
+            }
+            .button {
+                @extend %button-red;
+                @extend %btn-font;
+            }
+        }
+    }
+}

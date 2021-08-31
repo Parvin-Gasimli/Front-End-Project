@@ -1,0 +1,74 @@
+#flower {
+    .flower {
+        @extend %section;
+        margin-bottom: 70px;
+        .heading {
+            @extend %textSpecial;
+            max-width: 100%;
+            text-align: center;
+            p {
+                max-width: 620px;
+                text-align: center;
+                margin: auto;
+            }
+        }
+        .flower-content {
+            .card {
+                overflow: hidden;
+                border: 0;
+                .img {
+                    overflow: hidden;
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        max-width: 222px;
+                    }
+                }
+                .card-body {
+                    @extend %card-body;
+                }
+            }
+        }
+    }
+    .card {
+        img {
+            transform: scale(1);
+            overflow: hidden;
+            cursor: pointer;
+            transition: .4s linear;
+            opacity: .8;
+            &:hover {
+                transform: scale(.9);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@media (max-width:450px) {
+    .flower {
+        .heading {
+            h1 {
+                font-size: 30px !important;
+            }
+            p {
+                font-size: 14px !important;
+            }
+        }
+        .card {
+            img {
+                transform: scale(1);
+                overflow: hidden;
+                cursor: pointer;
+                transition: .4s linear;
+                opacity: .8;
+                width: 200px !important;
+                &:hover {
+                    transform: scale(.9);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

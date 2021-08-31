@@ -1,0 +1,92 @@
+#valentine {
+    width: 100%;
+    background-color: $bgColor;
+    padding: 100px 0px;
+    margin-top: 70px;
+    .valentive {
+        @extend %section;
+        .img-valentine {
+            position: relative;
+            width: 95%;
+            margin: auto;
+            overflow: hidden;
+            box-sizing: border-box;
+            .play {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-left: -43px;
+                margin-top: -43px;
+                background-color: white;
+                padding: 25px 27px;
+                border-radius: 50%;
+                text-align: center;
+                cursor: pointer;
+                .fa-play {
+                    font-size: 30px;
+                    color: $colorMoothRed;
+                    margin-left: 4px;
+                }
+            }
+            img {
+                transition: 0.3s;
+            }
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+        .texts {
+            @extend %textSpecial;
+            margin: auto;
+            p {
+                max-width: 400px;
+            }
+        }
+    }
+}
+
+@media (max-width:1240px) {
+    .texts {
+        top: 130px;
+        left: 15px;
+        font-size: 30px!important;
+        max-width: 100%!important;
+        padding-top: 0px!important;
+        p {
+            font-size: 17px;
+            min-width: 150px;
+            max-width: 300px;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .texts {
+        top: 130px;
+        left: 15px;
+        font-size: 30px!important;
+        max-width: 100%!important;
+        margin-top: 30px;
+        p {
+            font-size: 17px;
+            min-width: 150px;
+            max-width: 300px;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    #valentine {
+        .valentive {
+            .texts {
+                font-size: 21px !important;
+                p {
+                    max-width: 400px;
+                    font-size: 14px !important;
+                }
+            }
+        }
+    }
+}

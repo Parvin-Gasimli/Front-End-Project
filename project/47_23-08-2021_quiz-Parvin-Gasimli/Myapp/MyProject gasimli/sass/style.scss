@@ -1,0 +1,49 @@
+@import "partials/variables";
+@import "partials/extends";
+@import "components/navbar";
+@import'components/slider';
+@import'components/flowers';
+@import'components/slider-florist';
+@import'components/filter';
+@import'components/footer';
+@import'components/user';
+@import 'components/valentines';
+@import'components/product';
+@import'components/aboutMain';
+@import'components/blog';
+@import'components/social-slider';
+@import'components/instagram-slider';
+@import'components/tabs';
+@import'components/accordions';
+@import'components/imageover';
+@import'components/progress-bar';
+@import'components/contact';
+@import'components/sliderproduc';
+@import'components/productList';
+* {
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    color: white;
+    background: $colorMoothRed;
+}
+
+.to-top {
+    position: fixed;
+    height: 40px;
+    width: 40px;
+    bottom: 40px;
+    right: 16px;
+    background-color: $colorMoothRed;
+    display: none;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    z-index: 998;
+    i {
+        color: white;
+        font-size: 15px;
+    }
+}

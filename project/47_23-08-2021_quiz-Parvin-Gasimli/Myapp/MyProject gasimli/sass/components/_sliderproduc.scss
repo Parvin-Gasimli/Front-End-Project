@@ -1,0 +1,74 @@
+.card {
+    overflow: hidden;
+    border: 0;
+    .img {
+        overflow: hidden;
+        position: relative;
+        // height: 50vh;
+        height: 100%;
+        .sold {
+            @extend %bandage;
+            background-color: #2b2b2b;
+            color: white;
+        }
+        .sale {
+            @extend %bandage;
+            background-color: white;
+            color: black;
+        }
+        img {
+            transition: 0.3s;
+            height: 100% !important;
+            object-fit: cover;
+        }
+    }
+    .card-body {
+        @extend %card-body;
+        .bottom {
+            position: absolute;
+            display: flex;
+            left: 45%;
+            transition: 0.3s;
+        }
+        .text-img {
+            cursor: pointer;
+        }
+        .price {
+            transition: 0.5s;
+        }
+        .add-to-card {
+            opacity: 0;
+            transition: 0.5s;
+            margin-right: 50px;
+            cursor: pointer;
+            &:hover {
+                color: $colorMoothRed !important;
+            }
+        }
+    }
+    &:hover {
+        img {
+            transform: scale(1.04);
+        }
+        .card-body {
+            .bottom {
+                left: 36%;
+                &:first-of-type {
+                    z-index: 2;
+                }
+            }
+            .add-to-card {
+                opacity: 1;
+            }
+            .price {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.range {
+    ul {
+        list-style: none;
+    }
+}
